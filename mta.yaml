@@ -14,6 +14,9 @@ modules:
  - name: js
    type: nodejs
    path: js
+   parameters:
+     memory: 96MB
+     disk: 256M
    provides:
     - name: js_api
       properties:
@@ -23,18 +26,31 @@ modules:
  - name: web
    type: html5
    path: web
-
+   parameters:
+     memory: 96MB
+     disk: 256M
+   requires:
+     - name: minreq-uaa
 
  - name: xsjs
    type: nodejs
    path: xsjs
+   parameters:
+     memory: 96MB
+     disk: 256M
    provides:
     - name: xsjs_api
       properties:
          url: ${default-url}
 
 resources:
+ - name: minreq-uaa
+   type: com.sap.xs.uaa
+#   parameters:
+#      path: ./xs-security.json
+
  - name: hdi_db
    properties:
       hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
+   
