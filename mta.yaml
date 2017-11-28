@@ -10,6 +10,29 @@ modules:
    requires:
     - name: hdi_db
 
+
+ - name: js
+   type: nodejs
+   path: js
+   provides:
+    - name: js_api
+      properties:
+         url: ${default-url}
+
+
+ - name: web
+   type: html5
+   path: web
+
+
+ - name: xsjs
+   type: nodejs
+   path: xsjs
+   provides:
+    - name: xsjs_api
+      properties:
+         url: ${default-url}
+
 resources:
  - name: hdi_db
    properties:
