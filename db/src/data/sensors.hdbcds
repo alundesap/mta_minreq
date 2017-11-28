@@ -1,4 +1,4 @@
-namespace mta_iot.db.data;
+namespace mta_minreq.db.data;
 
 context sensors{
 	type KeyType : Integer;

@@ -2,4 +2,4 @@ SEQUENCE "mta_minreq.db.data::tempId"
 INCREMENT BY 1
 START WITH 2
 RESET BY
-SELECT IFNULL(MAX("tempId"), 0) + 1 FROM "mta_iot.db.data::sensors.temp"
+SELECT IFNULL(MAX("tempId"), 0) + 1 FROM "mta_minreq.db.data::sensors.temp"
