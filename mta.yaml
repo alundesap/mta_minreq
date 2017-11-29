@@ -10,25 +10,23 @@ modules:
    requires:
     - name: hdi_db
 
-
  - name: js
    type: nodejs
    path: js
    parameters:
-     memory: 96MB
-     disk: 256M
+      memory: 96MB
+      disk: 256M
    provides:
     - name: js_api
       properties:
          url: ${default-url}
 
-
  - name: web
    type: html5
    path: web
    parameters:
-     memory: 96MB
-     disk: 256M
+      memory: 96MB
+      disk: 256M
    requires:
      - name: minreq-uaa
 
@@ -36,12 +34,15 @@ modules:
    type: nodejs
    path: xsjs
    parameters:
-     memory: 96MB
-     disk: 256M
+      memory: 96MB
+      disk: 256M
    provides:
     - name: xsjs_api
       properties:
          url: ${default-url}
+   requires:
+     - name: minreq-uaa
+     - name: hdi_db
 
 resources:
  - name: minreq-uaa

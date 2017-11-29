@@ -4,9 +4,16 @@
 	"routes": 
 		[
 			{
+				"source": "(.*)(.xsjs)",
+				"destination": "xsjs_be",
+				"csrfProtection": false,
+				"authenticationType": "xsuaa"
+			},
+			{
 				"localDir": "resources",
 				"source": "^/(.*)", 
-				"authenticationType": "xsuaa"
+				"authenticationType": "xsuaa",
+				"scope" : "$XSAPPNAME.view"
 			}
 		]
 }
