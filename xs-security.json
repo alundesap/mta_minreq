@@ -28,10 +28,15 @@
 			"valueType": "string"
 		},
 		{
-			"name": "years",
-			"description": "Years of Service",
-			"valueType": "number"
-		}
+			"name": "age",
+			"description": "Age in Years",
+			"valueType": "int"
+		},
+		{
+			"name": "start_date",
+			"description": "Start Date",
+			"valueType": "date"
+		}	
 	],
 
 "role-templates": 
