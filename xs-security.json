@@ -57,7 +57,7 @@
 
 		{
 			"name": "MinReqUser",
-			"description": "Role for creating data",
+			"description": "Role for viewing data",
 			"scope-references": 
 				[ 
 					"$XSAPPNAME.view" 
