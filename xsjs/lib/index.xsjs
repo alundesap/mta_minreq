@@ -12,6 +12,8 @@ for (var i=0; i<hdrs.length; i++) {
 	}	
 }
 
+console.log("Request: " + JSON.stringify($.request.cookies));
+
 hostname = (host.split(":"))[0];
 
 body += "<html>\n";
@@ -25,6 +27,7 @@ body += "<a href=\"sensors.xsodata/temp(1)/?$format=json\" target=\"1temp\">Firs
 body += "<a href=\"sensors.xsodata/temp/?$format=json\" target=\"temps\">All Temps</a><br />\n";
 body += "<a href=\"sensors.xsodata/temp/?$format=json&$filter=tempVal gt 99\" target=\"tempsf\">Temps > 99</a><br />\n";
 body += "<a href=\"sensors.xsodata/temp/?$format=json&$filter=tempVal gt 99&$select=tempId,tempVal\" target=\"tempsnotime\">Temps > 99 no Time Fields</a><br />\n";
+body += "<a href=\"sensors.xsodata/tempNoTS/?$format=json\" target=\"temps\">Temps View no Timestamps( > 99 via structured privilege)</a><br />\n";
 body += "<a href=\"test_post.xsjs\" target=\"post\">Post Temp</a><br />\n";
 body += "<br />\n";
 body += "<br />\n";

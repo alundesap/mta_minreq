@@ -20,6 +20,9 @@ modules:
     - name: js_api
       properties:
          url: ${default-url}
+   requires:
+     - name: minreq-uaa
+     - name: hdi_db
 
  - name: web
    type: html5
@@ -29,6 +32,18 @@ modules:
       disk: 256M
    requires:
      - name: minreq-uaa
+     - name: xsjs_api
+       group: destinations
+       properties:
+          name: xsjs_be
+          url: '~{url}'
+          forwardAuthToken: true
+     - name: js_api
+       group: destinations
+       properties:
+          name: js_be
+          url: '~{url}'
+          forwardAuthToken: true
 
  - name: xsjs
    type: nodejs

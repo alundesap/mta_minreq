@@ -1,6 +1,7 @@
 {
 
 "xsappname": "mta_minreq",
+"description": "This minimum requirements example app defines 2 scopes",
 
 "scopes": 
 	[ 
@@ -13,26 +14,54 @@
 			"description": "Create data"
 		}
 	],
+	
+"attributes": 
+	[
+		{
+			"name": "manager",
+			"description": "Employee's Manager Name",
+			"valueType": "string"
+		},
+		{
+			"name": "team",
+			"description": "Employee's Team Name",
+			"valueType": "string"
+		},
+		{
+			"name": "years",
+			"description": "Years of Service",
+			"valueType": "number"
+		}
+	],
 
 "role-templates": 
 	[
 		{
-			"name": "MinReqView", 
-			"description": "Role for viewing data",
-			"scope-references": 
-				[ 
-					"$XSAPPNAME.view" 
-				]
-		},
-
-		{
-			"name": "MinReqCreate",
+			"name": "MinReqManager", 
 			"description": "Role for creating data",
 			"scope-references": 
 				[ 
 					"$XSAPPNAME.create",
 					"$XSAPPNAME.view" 
-				] 
+				],
+			"attribute-references": 
+				[
+					"team"
+				]
+		},
+
+		{
+			"name": "MinReqUser",
+			"description": "Role for creating data",
+			"scope-references": 
+				[ 
+					"$XSAPPNAME.view" 
+				], 
+			"attribute-references": 
+				[
+					"team",
+					"manager"
+				]
 		}
 	]
 }

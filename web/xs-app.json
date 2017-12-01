@@ -4,10 +4,25 @@
 	"routes": 
 		[
 			{
+				"source": "(js\/)(.*)",
+				"destination": "js_be", 
+				"csrfProtection": false,
+				"authenticationType": "xsuaa",
+				"scope" : "$XSAPPNAME.create"
+			},
+			{
 				"source": "(.*)(.xsjs)",
 				"destination": "xsjs_be",
 				"csrfProtection": false,
-				"authenticationType": "xsuaa"
+				"authenticationType": "xsuaa",
+				"scope" : "$XSAPPNAME.view"
+			},
+			{
+				"source": "(.*)(.xsodata)",
+				"destination": "xsjs_be", 
+				"csrfProtection": false,
+				"authenticationType": "xsuaa",
+				"scope" : "$XSAPPNAME.create"
 			},
 			{
 				"localDir": "resources",

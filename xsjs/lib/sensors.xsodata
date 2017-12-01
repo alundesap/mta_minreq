@@ -2,4 +2,6 @@ service {
 	"mta_minreq.db.data::sensors.temp" as "temp" 
 		create using "inc:tempCreate.xsjslib::tempCreate"
 	;
+	"mta_minreq.db.data::sensors.tempNoTimestamp" as "tempNoTS" keys generate local "ID"
+	;
 }

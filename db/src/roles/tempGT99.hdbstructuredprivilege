@@ -1,0 +1,1 @@
+STRUCTURED PRIVILEGE	"mta_minreq.db.roles::TEMP_GT_99_VIEW_PRIVILEGE"	FOR SELECT ON	"mta_minreq.db.data::sensors.tempNoTimestamp"WHERE "TempVal" > 99
