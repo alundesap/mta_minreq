@@ -8,7 +8,7 @@
 				"destination": "js_be", 
 				"csrfProtection": false,
 				"authenticationType": "xsuaa",
-				"scope" : "$XSAPPNAME.create"
+				"scope" : "$XSAPPNAME.view"
 			},
 			{
 				"source": "(.*)(.xsjs)",
