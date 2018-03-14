@@ -62,8 +62,8 @@ modules:
 resources:
  - name: minreq-uaa
    type: com.sap.xs.uaa
-#   parameters:
-#      path: ./xs-security.json
+   parameters:
+      config_path: xs-security.json
 
  - name: hdi_db
    properties:
