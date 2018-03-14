@@ -8,7 +8,7 @@ modules:
    type: hdb
    path: db
    requires:
-    - name: hdi_db
+    - name: minreq-db
 
  - name: js
    type: nodejs
@@ -22,7 +22,7 @@ modules:
          url: ${default-url}
    requires:
      - name: minreq-uaa
-     - name: hdi_db
+     - name: minreq-db
 
  - name: web
    type: html5
@@ -57,7 +57,7 @@ modules:
          url: ${default-url}
    requires:
      - name: minreq-uaa
-     - name: hdi_db
+     - name: minreq-db
 
 resources:
  - name: minreq-uaa
@@ -65,7 +65,7 @@ resources:
    parameters:
       config_path: xs-security.json
 
- - name: hdi_db
+ - name: minreq-db
    properties:
       hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
