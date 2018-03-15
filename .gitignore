@@ -1,3 +1,6 @@
 mta-assembly/
 mtad.yaml
 mtad.yaml-e
+.mta/
+node_modules/
+target/

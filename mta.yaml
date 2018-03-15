@@ -16,6 +16,7 @@ modules:
    parameters:
       memory: 96MB
       disk: 256M
+      host: minreq-js
    provides:
     - name: js_api
       properties:
@@ -30,6 +31,7 @@ modules:
    parameters:
       memory: 96MB
       disk: 256M
+      host: minreq
    requires:
      - name: minreq-uaa
      - name: xsjs_api
@@ -51,6 +53,7 @@ modules:
    parameters:
       memory: 96MB
       disk: 256M
+      host: minreq-xsjs
    provides:
     - name: xsjs_api
       properties:
@@ -69,4 +72,3 @@ resources:
    properties:
       hdi-container-name: ${service-name}
    type: com.sap.xs.hdi-container
-   
