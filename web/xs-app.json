@@ -27,8 +27,7 @@
 			{
 				"localDir": "resources",
 				"source": "^/(.*)", 
-				"authenticationType": "xsuaa",
-				"scope" : "$XSAPPNAME.view"
+				"authenticationType": "none"
 			}
 		]
 }

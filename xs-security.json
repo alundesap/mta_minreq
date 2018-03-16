@@ -65,5 +65,13 @@
 				[
 				]
 		}
-	]
+	],
+
+"oauth2-configuration":{  
+	"allowedproviders":
+		[  
+			"a-team.accounts400.ondemand.com"
+		]
+}
+
 }
