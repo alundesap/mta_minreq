@@ -19,6 +19,10 @@ xs deploy . --use-namespaces --no-namespaces-for-services --no-start
 
 CF Deploys
 ```
+npm config set @sap:registry "https://npm.sap.com/"
+npm config set registry "https://registry.npmjs.org/"
+npm config set strict-ssl true
+
 cf create-service xsuaa application minreq-uaa -c ./xs-security.json
 mkdir -p target
 mta --build-target CF --mtar target/mta_minreq-cf.mtar build
