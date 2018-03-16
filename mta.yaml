@@ -16,7 +16,7 @@ modules:
    parameters:
       memory: 96MB
       disk: 256M
-      host: minreq-js
+      host: minreq-shared-js
    provides:
     - name: js_api
       properties:
@@ -31,7 +31,9 @@ modules:
    parameters:
       memory: 96MB
       disk: 256M
-      host: minreq
+      host: minreq-shared-web
+   properties:
+      TENANT_HOST_PATTERN: '^minreq-(.*)-web.(.*)'
    requires:
      - name: minreq-uaa
      - name: xsjs_api
@@ -53,7 +55,7 @@ modules:
    parameters:
       memory: 96MB
       disk: 256M
-      host: minreq-xsjs
+      host: minreq-shared-xsjs
    provides:
     - name: xsjs_api
       properties:

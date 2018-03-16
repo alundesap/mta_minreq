@@ -19,9 +19,9 @@ xs deploy . --use-namespaces --no-namespaces-for-services --no-start
 
 CF Deploys
 ```
-cf create-service xsuaa default minreq-uaa -c ./xs-security.json
+cf create-service xsuaa application minreq-uaa -c ./xs-security.json
 mkdir -p target
 mta --build-target CF --mtar target/mta_minreq-cf.mtar build
-xs deploy target/mta_minreq-cf.mtar --use-namespaces
+cf deploy target/mta_minreq-cf.mtar --use-namespaces --no-namespaces-for-services
 
 ```
