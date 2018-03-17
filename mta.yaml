@@ -53,7 +53,7 @@ modules:
    type: nodejs
    path: xsjs
    parameters:
-      memory: 96MB
+      memory: 128MB
       disk: 256M
       host: minreq-shared-xsjs
    provides:
