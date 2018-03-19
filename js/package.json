@@ -1,11 +1,11 @@
 {
 	"dependencies": {
-		"express": "^4.15.3",
-		"@sap/xsenv": "^1.2.8",
-		"@sap/logging": "^3.1.0",
-		"@sap/hdbext": "^4.4.3",
-		"@sap/xssec": "^2.1.1",
-		"passport": "^0.3.2"
+		"express": "^4.16.2",
+		"@sap/xsenv": "^1.2.9",
+		"@sap/logging": "^3.3.1",
+		"@sap/hdbext": "^4.7.0",
+		"@sap/xssec": "^2.1.6",
+		"passport": "^0.2.1"
 	},
 	"description": "NodeJS Module",
 	"devDependencies": {},
